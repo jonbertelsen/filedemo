@@ -1,8 +1,11 @@
 public class Movie {
 
-    private String title = "";
+    private String title = "Missing Title";
     private double rating = 0.0;
     private int year = 0;
+
+    public Movie() {
+    }
 
     public Movie(String title, double rating, int year) {
         this.title = title;
