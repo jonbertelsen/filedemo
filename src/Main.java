@@ -14,6 +14,7 @@ public class Main {
         imdb.removeMovie("First blood 1");
 
         imdb.showMovies();
+        imdb.saveMoviesToFile("imdbfiles.txt");
 
     }
 }

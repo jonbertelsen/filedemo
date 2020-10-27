@@ -1,0 +1,12 @@
+TITLE
+Terminator 1
+RATING
+8.0
+YEAR
+1984
+TITLE
+Fjern mig
+RATING
+8.0
+YEAR
+1984

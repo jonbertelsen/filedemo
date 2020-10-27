@@ -1,7 +1,14 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Imdb {
+
+    private final String TITLE = "TITLE";
+    private final String RATING = "RATING";
+    private final String YEAR = "YEAR";
 
     private List<Movie> movies;
     private int counter = 0;
@@ -21,13 +28,21 @@ public class Imdb {
         }
     }
 
-
     public void saveMoviesToFile(String fileName){
 
-    // TODO: saveMoviesToFile
-
-
-
+    try (PrintWriter writer = new PrintWriter(new File(fileName))) {
+        for (Movie movie : movies) {
+            writer.println(TITLE);
+            writer.println(movie.getTitle());
+            writer.println(RATING);
+            writer.println(movie.getRating());
+            writer.println(YEAR);
+            writer.println(movie.getYear());
+        }
+    } catch (FileNotFoundException e){
+        e.printStackTrace();
+    }
+    
     }
 
     public void readMoviesFromFile(String fileName){
